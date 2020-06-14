@@ -1,0 +1,55 @@
+/* CONTAINER */
+.container{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/bg-login.jpg) center;
+    background-size: cover;
+}
+
+/* login */
+.container .login{
+    width: 400px;
+    align-items: flex-end;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 25px;
+}
+
+.container .login input[type=submit]{
+    color: #fff;
+    font-family: "Raleway";
+    font-size: 1rem;
+    font-weight: 500;
+    background: #3369c8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 25px;
+}
+
+/* login - header */
+.container .login .header{
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.container .login .header h1{
+    display: flex;
+    justify-content: center;
+    color: #3369c8;
+    font-size: 1.3rem;
+}
+
+.container .login .header h1 img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+@media(max-width: 500px){
+    .container .login{
+        width: 100%;
+    }
+}

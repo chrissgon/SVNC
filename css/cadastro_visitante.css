@@ -1,0 +1,74 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: url(../img/bg-login.jpg);
+    background-size: cover;
+}
+
+/* CONTAINER */
+.container{
+    width: 400px;
+    background: #fff;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+/* cadastro */
+.container .cadastro{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 25px 50px;
+}
+
+/* cadastro - header */
+.container .cadastro .header{
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 25px; 
+}
+
+.container .cadastro .header h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3369c8;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.container .cadastro .header h1 img{
+    margin-right: 5px;
+}
+
+/* select */
+.container .info p select{
+    color: #333;
+    background: #fff;
+    padding-left: 8px;
+}
+
+.container .info p select:focus{
+    outline: none!important;
+    border-bottom-color: #3369c8!important;
+}
+
+/* MEDIAS */
+@media(max-width: 359px){
+    body{
+        height: auto;
+        padding: 50px 0;
+    }
+    .container .cadastro{
+        padding: 25px;
+    }
+}

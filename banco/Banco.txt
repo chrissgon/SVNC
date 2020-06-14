@@ -1,0 +1,56 @@
+create table admin(
+    id_adm int primary key not null auto_increment,
+    nom_adm varchar(15),
+    sen_adm varchar(25),
+);
+
+create table aluno(
+    rm_alu varchar(5) primary key,
+    nom_alu varchar(100),
+    ser_alu varchar(2),
+    cur_alu varchar(30),
+    tur_alu varchar(1),
+    ema_alu varchar(100)
+);
+
+create table visitante(
+    cpf_vis varchar(11) primary key,
+    nom_vis varchar(100),
+    ema_vis varchar(100),
+    des_vis varchar(50),
+    sen_vis varchar(50)
+);
+
+create table responsavel(
+    id_res int auto_increment primary key not null,
+    nom_res varchar(100),
+    pro_res varchar(25),
+    des_res varchar(100),
+    sen_res varchar(50)
+);
+
+create table palestra(
+    id_pales int auto_increment primary key not null,
+    nom_pales varchar(100),
+    des_pales varchar(200),
+    res_pales int not null,
+    car_pales varchar(10),
+    dat_pales varchar(5),
+    loc_pales varchar(25),
+    ini_pales varchar(5),
+    ter_pales varchar(5),
+    sta_pales varchar(3),
+    foreign key (res_pales) references responsavel(id_res)
+);
+
+create table inscricao(
+    id_ins int auto_increment primary key not null,
+    id_pales int,
+    id_res int,
+    id_vis varchar(11),
+    id_alu varchar(5),
+    foreign key (id_pales) references palestra(id_pales),
+    foreign key (id_res) references responsavel(id_res),
+    foreign key (id_vis) references visitante(cpf_vis),
+    foreign key (id_alu) references aluno(rm_alu)
+);

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Semana Venha Nos Conhecer</title>
+    <!-- METAS -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Semana Venha Nos Conhecer, Etec Paulistano, Eventos, Palestras, Projetos, Semana Paulo Freire, Oficinas">
+    <meta name="description" content="Site de divulgação de eventos e projetos da Etec Paulistano">
+    <meta name="author" content="Christopher">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/cadastro_visitante.css" />
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+    <!-- LOGO -->
+    <link rel="icon" href="">
+
+</head>
+
+<body>
+
+    <!-- BTN-FLOAT -->
+    <a href="index.html" class="btn-float"><i class="material-icons">home</i></a>
+
+    <!-- CONTAINER -->
+    <section class="container">
+        
+        <!-- login -->
+        <form action="php/cadastro_visitante.php" method="post" class="cadastro">
+            <!-- header -->
+            <header class="header">
+                <h1><img src="img/icon-vis.png">Visitante</h1>
+            </header>
+            <!-- info -->
+            <article class="info">
+                <p class="input">
+                    <input type="text" name="cpf" minlength="11" maxlength="11" pattern="[0-9]+" title="Somente Números" required>
+                    <label>CPF</label>
+                </p>
+                <p class="input">
+                    <input type="text" name="nome" pattern="[a-zA-ZÀ-ž\s]+" minlength="4">
+                    <label>Nome</label>
+                </p>
+                <p class="input">
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </p>
+                <p class="input">
+                    <input type="text" name="descricao" pattern="[a-zA-ZÀ-ž\s]+" required>
+                    <label>Descrição</label>
+                </p>
+                <p class="input">
+                    <input type="password" name="senha" minlength="6" required>
+                    <label>Senha</label>
+                </p>
+            </article>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</body>
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- JS -->
+    <script src="js/pred.js"></script>
+    <script src="js/cadastro.js"></script>
+</html>

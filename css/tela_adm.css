@@ -1,0 +1,545 @@
+/* MODAL */
+/* header */
+.modal .header{
+    background: none;
+    padding: 25px;
+}
+
+/* info */
+.modal .info{
+    height: 300px;
+    overflow: auto;
+    padding: 0 25px 25px 25px;
+}
+
+.modal .info::-webkit-scrollbar{
+    display: none;
+}
+
+.modal .info .input{
+    margin-bottom: 15px;
+}
+
+.modal .info .input input, .modal .info .input textarea, .modal .info .input select{
+    pointer-events: none;
+    padding: 15px 10px;
+}
+
+.input-active{
+    pointer-events: all!important;
+}
+
+.modal .info .input input::placeholder{
+    font-family: "Raleway";
+}
+
+.modal .footer{
+    flex-direction: row;
+    justify-content: center;
+    background: #eee;
+}
+
+.modal .footer .btn-form{
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modal .footer input[type=submit]{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 0;
+    z-index: 1;
+}
+
+.modal .footer i{
+    position: absolute;
+    color: #3369c8;
+    border-radius: 100px;
+    padding: 10px;
+    transition: .1s all;
+}
+
+.btn-active{
+    color: #eee!important;
+    background: #3369c8;
+    animation: btn-form .2s ease;
+}
+
+/* MODAL-CHAMADA */
+.modal-chamada .info{
+    height: auto;
+}
+
+.modal-chamada .info p span{
+    color: #3369c8;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.modal-chamada input[type=submit]{
+    margin: 0 0 25px 25px;
+}
+
+/* MODAL-PALESTRANTE */
+.modal-palestrante .info{
+    height: auto;
+}
+
+.modal-palestrante input, .modal-palestrante textarea{
+    pointer-events: all!important;
+}
+
+.modal-palestrante input[type=submit]{
+    margin: 0 0 25px 25px;
+}
+
+/* MODAL-CONFIGURAÇÕES */
+.modal-configuracoes .info{
+    height: auto;
+}
+
+.modal-configuracoes input[type=submit]{
+    margin: 0 0 25px 25px;
+}
+
+.modal-configuracoes input, .modal-configuracoes textarea{
+    pointer-events: all!important;
+}
+
+/* NAV */
+/* btn-nav */
+.btn-nav{
+    background: #eee;
+}
+.navbar .menu:nth-child(2){
+    min-height: 85vh;
+}
+
+.navbar .menu:nth-child(3) i{
+    transform: rotate(180deg);
+}
+
+/* HEADER */
+.header{
+    width: 100%;
+    height: 150px;
+    align-items: flex-start;
+    background: url(../img/tela_adm.jpg) center;
+    background-size: cover;
+    padding-left: 150px;
+}
+
+.header h1{
+    width: 100%;
+    color: #fff;
+    font-size: 2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* CONTAINER */
+.container{
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+.container h3{
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.container h3::after{
+    content: "";
+    width: 250px;
+    height: 2px;
+    display: block;
+    background: #3369c8;
+}
+
+/* INICIAL */
+.inicial{
+    display: flex;
+}
+
+/* status */
+.inicial .status{
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.inicial .status h4{
+    width: 200px;
+    font-size: 1.2rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* btn-status */
+
+.inicial .btn-status input{
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+
+.inicial .btn-status input + label{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.inicial .btn-status input + label{
+    width: 40px;
+    height: 20px;
+    border-radius: 100px;
+}
+.inicial .btn-status input + label:before,
+.inicial .btn-status input + label:after{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    content: "";
+    transition: transform .2s;
+}
+.inicial .btn-status input + label:before{
+    right: 1px;
+    background-color: #f1f1f1;
+    border-radius: 100px;
+    transition: background .4s;
+}
+.inicial .btn-status input + label:after{
+    width: 20px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.inicial .btn-status input:checked + label:before{
+    background-color: #3369c8;
+}
+.inicial .btn-status input:checked + label:after{
+    transform: translateX(20px);
+}
+
+/* item */
+.inicial .item{
+    width: 30%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.inicial .item h3{
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.inicial .item .itens{
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.inicial .item .itens p{
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 25px;
+}
+
+.inicial .item .itens .opcoes{
+    min-width: 100px;
+    height: 100%;
+    flex-direction: row;
+    background: #c8c8c8;
+}
+
+.inicial .item:nth-child(1n + 2) .itens .opcoes{
+    min-width: 50px;
+}
+
+.inicial .item .itens .opcoes .btn{
+    width: 50%;
+    height: 100%;
+    background: #2656a8;
+    cursor: pointer;
+}
+
+.inicial .item:nth-child(1n + 2) .itens .opcoes .btn{
+    width: 100%;
+}
+
+.inicial .item .itens .opcoes .btn:nth-child(2){
+    background: #3369c8;
+}
+
+.inicial .item:nth-child(3) .itens .opcoes .btn{
+    background: #3369c8;
+}
+
+.inicial .item .itens .opcoes .btn i{
+    color: #eee;
+}
+
+/* CADASTRAR */
+.cadastrar_pales .info, .cadastrar input[type=submit]{
+    margin-top: 15px;
+}
+
+/* CHAMADA */
+.chamada .lista{
+    width: 100%;
+}
+
+.chamada .lista .itens{
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+.chamada .lista .itens p{
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* LISTA */
+.lista .cadastro{
+    width: 100%;
+    height: 50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: .3s all;
+}
+
+.lista .cadastro p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #3369c8;
+    font-size: 1.2rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.lista .cadastro p i{
+    color: #fff;
+    background: #3369c8;
+    border-radius: 100px;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+.lista .itens{
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0 25px;
+    margin: 10px 0;
+    transition: .3s all;
+}
+
+.list-active{
+    height: auto!important;
+}
+
+.lista .itens .info{
+    width: 45%;
+    transition: .1s all;
+}
+
+.lista .itens .info:nth-child(2){
+    opacity: 0;
+}
+
+.info-visible{
+    opacity: 1!important;
+}
+
+.lista .itens .header{
+    height: auto;
+    background: none;
+    padding: 0;
+    margin-top: -40px;
+    transition: .3s all;
+}
+
+.header-active{
+    margin-top: 5px!important;
+}
+
+.lista .itens .header h4{
+    color: #2656a8;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.lista .itens .info p{
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* CONFIGURAÇÕES */
+.configuracoes{
+    flex-direction: column;
+}
+
+.configuracoes .cadastro{
+    width: 100%;
+    height: 50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: .3s all;
+}
+
+.configuracoes .cadastro p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #3369c8;
+    font-size: 1.2rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.configuracoes .cadastro p i{
+    color: #fff;
+    background: #3369c8;
+    border-radius: 100px;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+.configuracoes .itens{
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0 25px;
+    margin: 10px 0;
+    transition: .3s all;
+}
+
+/* MEDIAS */
+@media(max-width: 1000px){
+    /* HEADER */
+    .header{
+        height: 100px;
+        padding-left: 125px;
+    }
+    /* CONTAINER */
+    /* INICIAL */
+    .inicial{
+        flex-direction: column;
+    }
+    .inicial .item{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+@media(max-width: 700px){
+    /* LISTA */
+    .lista .itens{
+        flex-direction: column;
+    }
+    .lista .itens .info{
+        width: 100%;
+    }
+}
+
+@media(max-height: 500px){
+    /* MODAL */
+    /* info */
+    .modal .info{
+        height: 200px;
+    }
+}
+
+@media(max-width: 500px){
+    /* HEADER */
+    .header h1{
+        font-size: 1.5rem;
+    }
+    /* INICIAL */
+    /* item */
+    .inicial .item .itens{
+        height: 100px;
+        flex-direction: column;
+    }
+    .inicial .item .itens p{
+        padding: 10px 0 25px 15px;
+    }
+    .inicial .item .itens .opcoes{
+        width: 100%;
+    }
+}
+
+/* KEYFRAMES */
+@keyframes btn-form{
+    0%{
+        color: #eee;
+        background: #3369c8;
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

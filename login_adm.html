@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Semana Venha Nos Conhecer</title>
+    <!-- METAS -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Semana Venha Nos Conhecer, Etec Paulistano, Eventos, Palestras, Projetos, Semana Paulo Freire, Oficinas">
+    <meta name="description" content="Site de divulgação de eventos e projetos da Etec Paulistano">
+    <meta name="author" content="Christopher">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/login_adm.css" />
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+    <!-- LOGO -->
+    <link rel="icon" href="">
+
+</head>
+
+<body>
+
+    <!-- BTN-FLOAT -->
+    <a href="index.html" class="btn-float"><i class="material-icons">home</i></a>
+
+    <!-- CONTAINER -->
+    <section class="container">
+        <!-- login -->
+        <form action="php/login_adm.php" method="post" class="login">
+            <!-- login - header -->
+            <header class="header">
+                <h1><img src="img/icon-adm.png">Administrador</h1>
+            </header>
+            <!-- login - info -->
+            <article class="info">
+                <p class="input">
+                    <input type="text" name="user" pattern="[a-zA-ZÀ-ž\s]+" minlength="4">
+                    <label>Usuário</label>
+                </p>
+                <p class="input">
+                    <input type="password" name="senha" minlength="5" required>
+                    <label>Senha</label>
+                </p>
+            </article>
+            <input type="submit" value="Entrar">
+        </form>
+    </section>
+</body>
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- JS -->
+    <script src="js/pred.js"></script>
+    <script src="js/login_adm.js"></script>
+</html>

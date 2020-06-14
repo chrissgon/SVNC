@@ -1,0 +1,181 @@
+/* NAV */
+.navbar .info .input{
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.navbar .info .input strong{
+    font-size: .9rem;
+}
+
+.navbar .btn-filtro{
+    width: 100%;
+}
+
+.navbar .btn-filtro i{
+    color: #3369c8;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: 2px solid #3369c8;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 8px 25px;
+}
+
+.navbar .btn-filtro i strong{
+    font-family: Raleway;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 10px;
+    background: #fff;
+}
+
+/* HEADER */
+body > .header{
+    width: 100%;
+    background: url(../img/tela_adm.jpg) center;
+    background-size: cover;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 50px;
+    padding-top: 100px;
+}
+
+body > .header h1{
+    width: 100%;
+    color: #fff;
+    font-size: 2rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+body .filtro.nome{
+    width: 100%;
+    height: 40px;
+    font-family: "Raleway";
+    font-size: 1rem;
+    border: none;
+    border-radius: 100px;
+    outline: none!important;
+    padding-left: 25px;
+    box-sizing: border-box;
+}
+
+/* CONTAINER */
+.container{
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 25px;
+}
+
+.container h3{
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.container h3::after{
+    content: "";
+    width: 250px;
+    height: 2px;
+    display: block;
+    background: #3369c8;
+}
+
+/* LISTA */
+.lista .itens{
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.lista .itens .item{
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 2px solid #eee;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 8px 50px;
+    margin: 5px 0;
+    transition: .3s all;
+}
+
+.item-checked{
+    border-color: #3369c8!important;
+}
+
+.lista .itens input[type=checkbox]{
+    width: 0;
+    height: 0;
+}
+
+.lista .itens .checkbox{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    border-radius: 3px;
+    transform: translate(-35px, -27px);
+}
+
+.lista .itens .checkbox p{
+    height: 4px;
+    position: absolute;
+    background: #ccc;
+    border-radius: 2px;
+    transition: .1s all;
+}
+
+.lista .itens .checkbox p:nth-child(1){
+    width: 10px;
+    transform: rotate(45deg) translate(-1px, 6px);
+}
+
+.lista .itens .checkbox p:nth-child(2){
+    width: 18px;
+    transform: rotate(-45deg) translate(2px, 2px);
+}
+
+.lista .itens input:checked ~ .checkbox{
+    animation: checked .4s ease-in-out;
+}
+
+.lista .itens input:checked ~ .checkbox p{
+    background: #3369c8;
+}
+
+.lista .itens .item p{
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media(max-width: 1000px){
+    /* HEADER */
+    body > .header{
+        padding: 25px;
+        padding-top: 75px;
+        
+    }
+    body > .header h1{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes checked{
+    0%{
+        transform: translate(-35px, -27px) scale(0)
+    }
+    50%{
+        transform: translate(-35px, -27px) scale(1.3)
+    }
+    100%{
+        transform: translate(-35px, -28px) scale(1)
+    }
+}

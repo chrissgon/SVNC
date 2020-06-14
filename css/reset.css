@@ -1,0 +1,285 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&display=swap');
+
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, main{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box!important;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+form, main, article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, div, a{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+body{
+	font-family: "Raleway";
+}
+ol, ul{
+	list-style: none;
+}
+blockquote, q{
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after{
+	content: '';
+	content: none;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6, p{
+	line-height: 2;
+}
+
+/* BODY */
+body{
+    overflow-x: none;
+}
+
+.body-out{
+    overflow: hidden;
+}
+
+/* PRED */
+
+/* BTN-FLOAT */
+.btn-float{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 5%;
+    left: 95%;
+    color: #3369c8;
+    background: #fff;
+    border-radius: 100%;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .3);
+    transform: translateX(-100%);
+    z-index: 3;
+}
+
+/* NAV */
+.navbar{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #fff;
+    transform: translateX(-250px);
+    z-index: 1;
+}
+
+/* btn-nav */
+.btn-nav{
+    position: absolute;
+    background: #fff;
+    border-radius: 100px;
+    cursor: pointer;
+    padding: 5px 25px;
+    transform: translate(300px, 50px)
+}
+.btn-nav i{
+    color: #3369c8;
+}
+
+/* menu */
+.menu{
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #fff;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .1);
+    padding: 25px;
+    transition: .2s all;
+}
+.menu h3{
+    color: #aaa;
+	font-size: 1rem;
+	font-weight: 500;
+    margin-bottom: 15px;
+}
+.menu .aba{
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: #555;
+	font-weight: 500;
+	cursor: pointer;
+    margin-bottom: 10px;
+}
+.menu .aba i{
+    font-size: 25px;
+    margin-right: 25px;
+}
+.menuIn{
+    transform: translateX(250px)!important;
+}
+
+/* INPUT */
+.info{
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.info .input{
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+}
+.info .input.hidden{
+    display: none;
+}
+.input input, .input select, .input textarea{
+    width: 100%;
+    font-family: "Raleway";
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #eee!important;
+    padding: 10px;
+    transition: .3s all;
+}
+.input input:focus, .input textarea:focus, .input select:focus{
+    outline: none;
+    border-bottom-color: #3369c8!important;
+    box-shadow: none!important;
+}
+.input label{
+    position: absolute;
+    margin-left: 10px;
+    transition: .3s all;
+}
+.active-text{
+    font-size: .8rem;
+    transform: translateY(-25px);
+}
+input[type=submit]{
+    color: #fff;
+    font-family: "Raleway";
+    font-size: 1rem;
+    font-weight: 500;
+    background: #3369c8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 25px;
+}
+
+input[type=submit]:focus{
+    outline: none;
+}
+
+/* MODAL */
+.container-modal{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    background: #0000008a;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.load{
+    width: 50px;
+    height: 50px;
+    display: none;
+    position: absolute;
+    border: 5px solid #fff;
+    border-top-color: #3369c8;
+    border-radius: 100%;
+    animation: load 1s linear infinite;
+}
+
+.loading{
+    display: block;
+}
+
+.modal{
+    width: 400px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-loaded{
+    pointer-events: none;
+    opacity: 0;
+}
+
+.modal .header{
+    width: 100%;
+    height: 100px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: 25px;
+}
+
+.modal .header::after{
+    content: "";
+    width: 200px;
+    height: 2px;
+    background: #3369c8;
+}
+
+.modal .header h3{
+    width: 100%;
+    color: #333;
+    font-size: 1.5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.modal .footer{
+    width: 100%;
+    height: 50px;
+    z-index: 2;
+}
+
+/* MEDIAS */
+@media(max-width: 1000px){
+	/* btn-nav */
+	.btn-nav{
+		transform: translate(275px, 25px)
+	}
+}
+@media(max-width: 500px){
+    .modal{
+        width: 100%;
+    }
+}
+
+/* KEYFRAMES */
+@keyframes load{
+    to{
+        transform: rotate(360deg);
+    }
+}

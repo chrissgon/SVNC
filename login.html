@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Semana Venha Nos Conhecer</title>
+    <!-- METAS -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Semana Venha Nos Conhecer, Etec Paulistano, Eventos, Palestras, Projetos, Semana Paulo Freire, Oficinas">
+    <meta name="description" content="Site de divulgação de eventos e projetos da Etec Paulistano">
+    <meta name="author" content="Christopher">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+    <!-- LOGO -->
+    <link rel="icon" href="">
+
+</head>
+
+<body>
+
+    <!-- BTN-FLOAT -->
+    <a href="index.html" class="btn-float"><i class="material-icons">home</i></a>
+
+    <!-- CONTAINER -->
+    <section class="container">
+        <!-- login -->
+        <form action="php/login.php" method="post" class="login">
+            <!-- login - options -->
+            <header class="option">
+                <p class="radio">
+                    <input type="radio" name="option" value="vis" id="vis" checked="checked"><label for="vis" class="vis"><img src="img/icon-vis.png">Visitante</label>
+                </p>
+                <p class="radio">
+                    <input type="radio" name="option" value="alu" id="alu"><label for="alu" class="alu"><img src="img/icon-alu.png">Aluno</label>
+                </p>
+                <p class="radio">
+                    <input type="radio" name="option" value="prof" id="prof"><label for="prof" class="prof"><img src="img/icon-prof.png">Professor</label>
+                </p>
+            </header>
+            <!-- login - info -->
+            <article class="info vis">
+                <h3>Conta do Visitante</h3>
+                <p class="input">
+                    <input type="text" name="cpf" minlength="11" maxlength="11" pattern="[0-9]+" title="Somente Números" required>
+                    <label for="">CPF</label>
+                </p>
+                <p class="input">
+                    <input type="password" name="senha" minlength="5" required>
+                    <label>Senha</label>
+                </p class="input">
+            </article>
+            <article class="info alu">
+                <h3>Conta do Aluno</h3>
+                <p class="input">
+                    <input type="text" name="rm" minlength="5" maxlength="5" pattern="[0-9]+" required>
+                    <label>RM</label>
+                </p>
+                <p class="input">
+                    <input type="password" name="senha" minlength="5" required>
+                    <label>Senha</label>
+                </p>
+            </article>
+            <article class="info prof">
+                <h3>Conta do Professor</h3>
+                <p class="input">
+                    <input type="text" name="nome" pattern="[a-zA-ZÀ-ž\s]+" minlength="4">
+                    <label>Nome</label>
+                </p>
+                <p class="input">
+                    <input type="password" name="senha" minlength="5" required>
+                    <label>Senha</label>
+                </p>
+            </article>
+            <input type="submit" value="Entrar">
+        </form>
+    </section>
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- JS -->
+    <script src="js/pred.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+
+.modal .info{
+    height: auto;
+    padding: 0 25px;
+}
+
+.modal input[type=submit]{
+    margin: 0 0 25px 25px;
+}
+
+/* inscricao */
+.inscricao .info .mensagem{
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.inscricao .info .reload{
+    width: 100%;
+    height: 3px;
+    display: none;
+    overflow: hidden;
+    margin: 15px 0!important;
+}
+
+.inscricao .info .reload .animation{
+    width: 100%;
+    height: 100%;
+    background: #3369c8;
+    animation: reload 2s cubic-bezier(1,1,1,1) infinite;
+}
+
+/* programacao */
+.programacao .info{
+    padding: 0 25px 25px 25px;
+}
+
+.programacao .info p{
+    display: flex;
+    color: #3369c8;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.programacao .info p i{
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.programacao .info p strong{
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* lista */
+.lista .info p{
+    color: #3369c8;
+    font-size: 1.3rem;
+    line-height: 35px;
+    margin-bottom: 25px;
+}
+
+.lista .info input[type=submit]{
+    margin-left: 0;
+}
+
+/* NAV */
+.navbar{
+    justify-content: space-between!important;
+}
+
+.navbar > .menu:nth-child(2){
+    min-height: 85vh;
+}
+
+.navbar .menu:nth-child(3) i{
+    transform: rotate(180deg);
+}
+
+
+
+/* HEADER */
+body > .header{
+    width: 100%;
+    height: 150px;
+    background: url(../img/tela_adm.jpg) center;
+    background-size: cover;
+    align-items: flex-start;
+    padding-left: 150px;
+}
+
+body > .header h1{
+    width: 90%;
+    color: #fff;
+    font-size: 2rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* DADOS */
+.dados{
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 50px;
+}
+
+.dados p{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 25px 0 0 0;
+}
+
+.dados p i{
+    color: #3369c8;
+    font-size: 35px;
+    margin-right: 15px;
+}
+
+/* CONTAINER */
+.container{
+    width: 100%;
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 25px;
+}
+
+.container h3{
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.container h3::after{
+    content: "";
+    width: 250px;
+    height: 2px;
+    display: block;
+    background: #3369c8;
+}
+
+/* INSCRICAO */
+.container.inscricao{
+    display: flex;
+}
+
+.inscricao input[type=submit]{
+    margin-top: 25px;
+}
+
+/* data */
+.inscricao .data{
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.inscricao .data .dia{
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.aba-ativa::after{
+    content: "";
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    background: #3369c8;
+    transform: translateY(25px);
+    animation: aba-ativa .4s ease;
+}
+
+.inscricao .data .dia p{
+    width: 100%;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+/* table - palestras */
+.container-palestra{
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+.palestras{
+    min-width: 100%;
+    border-radius: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.palestras .header{
+    background: #3369c8;
+}
+
+.palestras .header tr th{
+    color: #fff;
+    text-align: left;
+    padding: 15px 20px;
+}
+
+.palestras .info tr{
+    background: #fff;
+    cursor: pointer;
+}
+
+.palestras .info tr td{
+    padding: 15px 20px;
+}
+
+.inscricao .palestras .info tr td:nth-child(1){
+    padding-left: 40px;
+}
+
+.inscricao .palestras .info tr td input[type=checkbox]{
+    width: 0;
+    height: 0;
+}
+
+.inscricao .palestras .info tr td .checkbox{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background: #fff;
+    border-radius: 3px;
+    transform: translate(-35px, -27px);
+}
+
+.inscricao .palestras .info tr td .checkbox p{
+    height: 4px;
+    position: absolute;
+    background: #ccc;
+    border-radius: 2px;
+    transition: .1s all;
+}
+
+.inscricao .palestras .info tr td .checkbox p:nth-child(1){
+    width: 10px;
+    transform: rotate(45deg) translate(-1px, 6px);
+}
+
+.inscricao .palestras .info tr td .checkbox p:nth-child(2){
+    width: 18px;
+    transform: rotate(-45deg) translate(2px, 2px);
+}
+
+.inscricao .palestras .info tr td input:checked ~ .checkbox{
+    animation: checked .4s ease-in-out;
+}
+
+.inscricao .palestras .info tr td input:checked ~ .checkbox p{
+    background: #3369c8;
+}
+
+
+/* MEDIAS */
+@media(max-width: 1000px){
+    /* HEADER */
+    body > .header{
+        height: 90px;
+        padding-left: 110px;
+    }
+    body > .header h1{
+        font-size: 1.8rem;
+    }
+}
+@media(max-width: 700px){
+    
+}
+@media(max-width: 500px){
+    /* MODAL */
+    .modal{
+        overflow: auto;
+    }
+    /* programacao */
+    .programacao .info{
+        max-height: 250px;
+    }
+    /* DADOS */
+    .dados{
+        padding: 0 25px;
+    }
+    /* CONTAINER */
+    .container{
+        padding: 25px 0;
+    }
+}
+
+/* KEYFRAMES */
+@keyframes aba-ativa{
+    0%{
+        width: 0;
+    }
+    50%{
+    }
+    100%{
+        width: 20%;
+    }
+}
+
+@keyframes checked{
+    0%{
+        transform: translate(-35px, -27px) scale(0)
+    }
+    50%{
+        transform: translate(-35px, -27px) scale(1.3)
+    }
+    100%{
+        transform: translate(-35px, -27px) scale(1)
+    }
+}
+
+@keyframes reload{
+    0%{
+        width: 100%;
+        transform: translateX(-100%);
+    }
+    50%{
+        width: 50%;
+        transform: translateX(100%);
+    }
+    100%{
+        width: 100%;
+        transform: translateX(100%);
+    }
+}
